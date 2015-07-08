@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   angular
-    .module('instaflickr')
+    .module('crafty-cart')
     .controller('MainController', function ($scope, PhotoService, $routeParams) {
       PhotoService.getPhotos().then(function (photos) {
         console.log(photos);

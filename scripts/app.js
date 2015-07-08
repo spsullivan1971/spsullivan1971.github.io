@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('instaflickr', [
+    .module('Crafty-Cart', [
       'ngRoute',
       'underscore',
       'moment'
@@ -13,9 +13,9 @@
           templateUrl: 'views/main.html',
           controller: 'MainController'
         })
-        .when('/myLikes', {
-          templateUrl: 'views/myLikes.html',
-          controller: 'LikesController'
+        .when('/productDetails', {
+          templateUrl: 'views/productDetails.html',
+          controller: 'detailsController'
         })
         .when('/detail/:photoId', {
           templateUrl: 'views/detail.html',
