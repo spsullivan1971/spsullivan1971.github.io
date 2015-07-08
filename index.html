@@ -10,9 +10,9 @@
 <body ng-app="etsyStore">
   <div class="navBar">
     <a href='#/'><h1>Run Etsy</h1></a>
-    <a href='#/shoppingcart'><ul>
+    <a href='#/cart'><ul>
       <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></li>
-      <li ng-controller="ShoppingCartController" class="cartCounter">{{items.length}}</li>
+      <li ng-controller="CartController" class="cartCounter">{{items.length}}</li>
     </ul></a>
   </div>
   <ng-view></ng-view>
@@ -29,9 +29,9 @@
 <script type="text/javascript" src="store/store.controller.js"></script>
 <script type="text/javascript" src="store/store.service.js"></script>
 
-<script type="text/javascript" src="shoppingcart/shoppingcart.module.js"></script>
-<script type="text/javascript" src="shoppingcart/shoppingcart.controller.js"></script>
-<script type="text/javascript" src="shoppingcart/shoppingcart.service.js"></script>
+<script type="text/javascript" src="cart/cart.module.js"></script>
+<script type="text/javascript" src="cart/cart.controller.js"></script>
+<script type="text/javascript" src="cart/cart.service.js"></script>
 </body>
 
 </html>
