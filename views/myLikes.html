@@ -1,0 +1,18 @@
+<div ng-include="'views/nav.html'"></div>
+<div class="container">
+  <div class="photos">
+    <article class="photo" ng-repeat="photo in likes" data-id="{{photo.id}}">
+      <header>
+        <img src="http://www.fillmurray.com/50/50" alt="" />
+        <div class="">
+          <a href="#">{{photo.title}}</a>
+        </div>
+        <a href="#">4 hours ago</a>
+      </header>
+      <div class="pContain">
+          <img ng-src="{{photo.image}}" alt="" />
+
+      </div>
+    </article>
+  </div>
+</div>
