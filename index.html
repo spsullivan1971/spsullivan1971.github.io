@@ -1,43 +1,37 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Etsy-Cart</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/styles-ass.scss">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-  	<div id="menu">
-  		<h1><a href="http://orig15.deviantart.net/1dd8/f/2007/223/8/8/salad_finegrs_tribute_by_iskallvinter.jpg"><b>GOTO</b>Etsy</a></h1>
-  		<div>
-  			<ul>
-  				<li><a href="Products">Products</a></li>
-  				<li><a href="shopping cart">Cart</a></li>
-  			</ul>
-  		</div>
-  	</div>
-  		<div id="cont"><div class="box large left">
-  	<h2>Our mission is to reimagine commerce in ways that build a more fulfilling and lasting world.</h2>
-    <p>We are building a human, authentic and community-centric global and local marketplace. We are committed to using the power of business to create a better world through our platform, our members, our employees and the communities we serve.
-  </p>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Etsy Store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-app="etsyStore">
+  <div class="navBar">
+    <a href='#/'><h1>Run Etsy</h1></a>
+    <a href='#/shoppingcart'><ul>
+      <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></li>
+      <li ng-controller="ShoppingCartController" class="cartCounter">{{items.length}}</li>
+    </ul></a>
   </div>
-  	</div>
-    <div id="bg">
-      <div>
-      <table cellpadding="0" cellspacing="0">
-        <tr>
-          <td><img src="images/market.png">
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-      <script type="text/javascript" src="scripts/app.js"></script>
-      <script type="text/javascript" src="scripts/controller.js"></script>
+  <ng-view></ng-view>
+</body>
 
-  </body>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="controllers.js"></script>
+<script type="text/javascript" src="services.js"></script>
+
+<script type="text/javascript" src="store/store.module.js"></script>
+<script type="text/javascript" src="store/store.controller.js"></script>
+<script type="text/javascript" src="store/store.service.js"></script>
+
+<script type="text/javascript" src="shoppingcart/shoppingcart.module.js"></script>
+<script type="text/javascript" src="shoppingcart/shoppingcart.controller.js"></script>
+<script type="text/javascript" src="shoppingcart/shoppingcart.service.js"></script>
+
 </html>
